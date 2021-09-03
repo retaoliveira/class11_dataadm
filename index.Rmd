@@ -136,24 +136,16 @@ Consiste na habilidade de **identificar**, nos dados, os **padrões válidos, no
 
 Considerando que minerar dados é um processo de transformar dados em informações úteis (dados mais valiosos a partir de dados complexos), alguns passos são realizados, como: **encontrar padrões**, **associações** e **anomalias gerais** nos dados.
 
+Metodologias da ciência da **computação**, da **estatística multivariada** e de outras áreas de conhecimento para realizar seus estudos. 
+
+
+A mineração de dados é uma das etapas mais importantes da metodologia **Knowledge Discovery in Databases (KDD)**, ou seja, descoberta de conhecimento das bases de dados
 
 ---
 
 # Mineração de dados
 
-Metodologias da ciência da computação, da estatística multivariada e de outras áreas de conhecimento para realizar seus estudos. 
-
-A mineração de dados é uma das etapas mais importantes da metodologia Knowledge Discovery in Databases (KDD), ou seja, descoberta de conhecimento das bases de dados
-
-A descoberta de conhecimento em bases de dados (KDD) pode ser definida como o processo de extração de informação a partir de dados registrados numa base de dados, um conhecimento implícito, previamente desconhecido, potencialmente útil e compreensível.
-
----
-
-# Mineração de dados
-
-## Métodos
-
-Etapas:
+## Etapas
 
 - definição clara do problema;    
 - a seleção de todas as fontes internas e externas de dados;   
@@ -163,35 +155,43 @@ Etapas:
 
 ---
 
-# O que é segmentação de mercado?
+# Características dos Big Data
 
-Segmentação de mercado é o processo de divisão da base de clientes em vários grupos de indivíduos que compartilham uma semelhança de diferentes maneiras que são relevantes para o marketing, tais como sexo, idade, interesses e hábitos de gastos diversos.
+- **Volume** - a grande quantidade de Big Data.
+- **Variedade** - os muitos formatos diferentes de Big Data disponíveis.
+- **Velocidade** - a grande velocidade na qual os Big Data são processados.
+- **Veracidade** - a qualidade dos dados sendo processados e analisados; 
+- **Valor** - o nível de insights valiosos que podem ser obtidos dos dados para melhorar a experiência do cliente e as decisões comerciais.
 
 ---
 
+# Ética e Dados
+
+> "Um novo ramo da Ética que estuda e avalia problemas morais relacionados a dados (incluindo geração, gravação, curadoria, processamento, disseminação, compartilhamento e uso), algoritmos (incluindo inteligência artificial, agentes artificiais, aprendizagem de máquinas e robôs) e práticas correspondentes (incluindo inovação responsável, programação, hacking e códigos profissionais), a fim de formular e apoiar soluções moralmente boas (por exemplo, condutas corretas ou valores corretos)".
+
+A ética dos dados se concentra em problemas éticos impostos pela **coleta e análise de grandes conjuntos de dados** e em questões que vão desde o **uso de Big Data em pesquisas biomédicas e ciências sociais**, a criação de perfis, publicidade e filantropia de dados, bem como “dados abertos”.
 
 ---
 
-A ética dos dados se concentra em problemas éticos impostos pela coleta e análise de grandes conjuntos de dados e em questões que vão desde o uso de Big Data em pesquisas biomédicas e ciências sociais, a criação de perfis, publicidade e filantropia de dados, bem como “dados abertos”.
+# Quais são os principais problemas éticos que vemos em relação à coleta e tratamento de dados hoje?
 
-Três questões são centrais nesta linha de análise: consentimento, privacidade do usuário e usuária, e o uso secundário de dados.
+Várias camadas: 
+- Empresa; 
+- Plataforma; e 
+- Usuário. 
 
-.footnote[
-Fonte: [O que é ética de dados](https://medium.com/somos-tera/o-que-e-etica-de-dados-3ce4702cdfc1)
+.question[
+Usuários não têm conhecimento suficiente e falta de uma regra de direito mundial.
 ]
 
----
-
-Análise textual
-
-
 
 ---
 
-Mapas e análise espacial no R
 
 
+# O que é segmentação de mercado?
 
+**Segmentação de mercado** é o processo de **divisão da base de clientes** em vários grupos de indivíduos que compartilham uma **semelhança** de diferentes maneiras que são relevantes para o marketing, tais como sexo, idade, interesses e hábitos de gastos diversos.
 
 ---
 
