@@ -1,9 +1,9 @@
 ---
-title: "Tratamento dos dados dos grupos"
-subtitle: "Encontros Síncronos 11 e 12"
+title: "Segmentação de mercado"
+subtitle: "Encontro Síncrono 13"
 author: 
   - <br></br>Renata Oliveira
-date: '27/08/2021 e 03/09/2021'
+date: '03/09/2021'
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -112,452 +112,86 @@ class: center, middle
 ### Discussões
 - Trabalhando com múltiplos dataframes
 - Mineração de dados
-    - Análise de cluster
-    - PCA
+    - **Análise de cluster**
+    - **PCA**
     - Análise de texto
-- Ética na análise de dados
+- **Ética na análise de dados**
 ]
 
 .pull-right[
-### Atividades
+### Trabalho Final
 
 ]
 ---
 
+# Mineração de dados
 
-class: middle
+Data mining, ou mineração de dados, é a prática de examinar dados que já foram coletados – utilizando diversos tipos de algoritmos, normalmente de forma automática –, a fim de gerar novas informações e encontrar padrões.
 
-# .hand[Nós...]
-
-.huge[.green[temos]] .hand[vários data frames]
-
-.huge[.pink[queremos]] .hand[juntá-los]
-
-[Download dos dados](https://www.dropbox.com/s/69kwi1qkss0x7ih/dados.zip?dl=0) 
+Consiste na habilidade de **identificar**, nos dados, os **padrões válidos, novos, potencialmente úteis e compreensíveis**, envolvendo **métodos estatísticos**, **ferramentas de visualização** e **técnicas de inteligência artificial**.
 
 ---
 
-```{r include=FALSE}
-professions <- read_csv("data/scientists/professions.csv")
-dates <- read_csv("data/scientists/dates.csv")
-works <- read_csv("data/scientists/works.csv")
-```
+# Mineração de dados
 
-## Data: Mulheres nas ciências 
+Considerando que minerar dados é um processo de transformar dados em informações úteis (dados mais valiosos a partir de dados complexos), alguns passos são realizados, como: **encontrar padrões**, **associações** e **anomalias gerais** nos dados.
 
-Informações sobre 10 mulheres nas ciências que mudaram o mundo
 
-.small[
-```{r echo=FALSE}
-professions %>% select(name) %>% kable()
-```
-]
+---
 
+# Mineração de dados
+
+Metodologias da ciência da computação, da estatística multivariada e de outras áreas de conhecimento para realizar seus estudos. 
+
+A mineração de dados é uma das etapas mais importantes da metodologia Knowledge Discovery in Databases (KDD), ou seja, descoberta de conhecimento das bases de dados
+
+A descoberta de conhecimento em bases de dados (KDD) pode ser definida como o processo de extração de informação a partir de dados registrados numa base de dados, um conhecimento implícito, previamente desconhecido, potencialmente útil e compreensível.
+
+---
+
+# Mineração de dados
+
+## Métodos
+
+Etapas:
+
+- definição clara do problema;    
+- a seleção de todas as fontes internas e externas de dados;   
+- e a preparação dos dados, que inclui o pré-processamento, reformatação dos dados;
+- implementação de métodos de análise; e   
+- análise dos resultados obtidos do processo de DM.   
+
+---
+
+# O que é segmentação de mercado?
+
+Segmentação de mercado é o processo de divisão da base de clientes em vários grupos de indivíduos que compartilham uma semelhança de diferentes maneiras que são relevantes para o marketing, tais como sexo, idade, interesses e hábitos de gastos diversos.
+
+---
+
+
+---
+
+A ética dos dados se concentra em problemas éticos impostos pela coleta e análise de grandes conjuntos de dados e em questões que vão desde o uso de Big Data em pesquisas biomédicas e ciências sociais, a criação de perfis, publicidade e filantropia de dados, bem como “dados abertos”.
+
+Três questões são centrais nesta linha de análise: consentimento, privacidade do usuário e usuária, e o uso secundário de dados.
 
 .footnote[
-Source: [Discover Magazine](https://www.discovermagazine.com/the-sciences/meet-10-women-in-science-who-changed-the-world)
+Fonte: [O que é ética de dados](https://medium.com/somos-tera/o-que-e-etica-de-dados-3ce4702cdfc1)
 ]
 
 ---
 
-## Entradas
+Análise textual
 
-.panelset[
 
-.panel[.panel-name[profissões]
-```{r}
-professions
-```
-]
-
-.panel[.panel-name[datas]
-```{r}
-dates
-```
-]
-
-.panel[.panel-name[trabalhos]
-```{r}
-works
-```
-]
-
-]
 
 ---
 
-## Resultado desejado
+Mapas e análise espacial no R
 
-```{r echo=FALSE}
-professions %>%
-  left_join(dates) %>%
-  left_join(works)
-```
 
----
 
-## Data frames de entrada
-
-.pull-left[
-```{r}
-names(professions)
-names(dates)
-names(works)
-```
-]
-.pull-right[
-```{r}
-nrow(professions)
-nrow(dates)
-nrow(works)
-```
-]
-
----
-
-class: middle
-
-# Junção de data frames
-
----
-
-## Junção de data frames
-
-```{r eval=FALSE}
-something_join(x, y)
-```
-
-- `left_join()`: todas as linhas de x
-- `right_join()`: todas as linhas de y
-- `full_join()`: todas as linhas de x e y
-- `semi_join()`: todas as linhas de x onde há valores correspondentes em y, mantendo apenas as linhas de x
-- `inner_join()`: todas as linhas de x onde há valores correspondentes em y, retornando toda combinação dos diferentes data frames no caso de múltiplas correspondências 
-- `anti_join()`: retorna todas as linhas de x onde não há valores correspondentes em y, sem duplicar linhas em x
-- ...
- 
----
-
-## Dados
-
-para os próximos slides...
-
-.pull-left[
-```{r echo=FALSE}
-x <- tibble(
-  id = c(1, 2, 3),
-  value_x = c("x1", "x2", "x3")
-  )
-```
-
-```{r}
-x
-```
-]
-.pull-right[
-```{r echo=FALSE}
-y <- tibble(
-  id = c(1, 2, 4),
-  value_y = c("y1", "y2", "y4")
-  )
-```
-
-```{r}
-y
-```
-]
-
----
-
-## `left_join()`
-
-.pull-left[
-```{r echo=FALSE, out.width="80%", out.extra ='style="background-color: #FDF6E3"'}
-include_graphics("img/left-join.gif")
-```
-]
-.pull-right[
-```{r}
-left_join(x, y)
-```
-]
-
----
-
-## `left_join()`
-
-```{r}
-professions %>%
-  left_join(dates) #<<
-```
-
----
-
-## `right_join()`
-
-.pull-left[
-```{r echo=FALSE, out.width="80%", out.extra ='style="background-color: #FDF6E3"'}
-include_graphics("img/right-join.gif")
-```
-]
-.pull-right[
-```{r}
-right_join(x, y)
-```
-]
-
----
-
-## `right_join()`
-
-
-```{r}
-professions %>%
-  right_join(dates) #<<
-```
-
----
-
-## `full_join()`
-
-.pull-left[
-```{r echo=FALSE, out.width="80%", out.extra ='style="background-color: #FDF6E3"'}
-include_graphics("img/full-join.gif")
-```
-]
-.pull-right[
-```{r}
-full_join(x, y)
-```
-]
-
----
-
-## `full_join()`
-
-```{r}
-dates %>%
-  full_join(works) #<<
-```
-
----
-
-## `inner_join()`
-
-.pull-left[
-```{r echo=FALSE, out.width="80%", out.extra ='style="background-color: #FDF6E3"'}
-include_graphics("img/inner-join.gif")
-```
-]
-.pull-right[
-```{r}
-inner_join(x, y)
-```
-]
-
----
-
-## `inner_join()`
-
-```{r}
-dates %>%
-  inner_join(works) #<<
-```
-
----
-
-## `semi_join()`
-
-.pull-left[
-```{r echo=FALSE, out.width="80%", out.extra ='style="background-color: #FDF6E3"'}
-include_graphics("img/semi-join.gif")
-```
-]
-.pull-right[
-```{r}
-semi_join(x, y)
-```
-]
-
----
-
-## `semi_join()`
-
-```{r}
-dates %>%
-  semi_join(works) #<<
-```
-
----
-
-## `anti_join()`
-
-.pull-left[
-```{r echo=FALSE, out.width="80%", out.extra ='style="background-color: #FDF6E3"'}
-include_graphics("img/anti-join.gif")
-```
-]
-.pull-right[
-```{r}
-anti_join(x, y)
-```
-]
-
----
-
-## `anti_join()`
-
-```{r}
-dates %>%
-  anti_join(works) #<<
-```
-
----
-
-## Realizando a junção dos dados
-
-```{r}
-professions %>%
-  left_join(dates) %>%
-  left_join(works)
-```
-
----
-
-class: middle
-
-# Estudo de caso: dados de estudantes
-
----
-
-## Dados de estudantes
-
-- Temos:
-  - Enrolment: dados oficiais de matrícula da universidade
-  - Survey: dados coletados junto aos estudantes sobre as disciplinas que estão cursando
-- Want: Resultados da pesquisa considerando informações de todos alunos matriculados
-
---
-
-```{r include=FALSE}
-enrolment <- read_csv("data/students/enrolment.csv")
-survey <- read_csv("data/students/survey.csv")
-```
-
-.pull-left[
-```{r message = FALSE}
-enrolment
-```
-]
-.pull-right[
-```{r message = FALSE}
-survey
-```
-]
-
----
-
-## Dados dos estudantes
-
-.panelset[
-
-.panel[.panel-name[Em classes]
-```{r}
-enrolment %>% 
-  left_join(survey, by = "id") #<<
-```
-]
-
-.panel[.panel-name[Pesquisa direta]
-```{r}
-enrolment %>% 
-  anti_join(survey, by = "id") #<<
-```
-]
-
-.panel[.panel-name[Abandonaram as disciplinas]
-```{r}
-survey %>% 
-  anti_join(enrolment, by = "id") #<<
-```
-]
-
-]
-
----
-
-class: middle
-
-# Estudo de caso: venda de alimentos
-
----
-
-## Vendas de alimentos
-
-- Temos:
-  - Purchases: Uma linha por consumidor, por item.
-  - Prices: uma linha por item na loja
-- Want: receita total
-
---
-
-```{r include=FALSE}
-purchases <- read_csv("data/sales/purchases.csv")
-prices <- read_csv("data/sales/prices.csv")
-```
-
-.pull-left[
-```{r message = FALSE}
-purchases
-```
-]
-.pull-right[
-```{r message = FALSE}
-prices
-```
-]
-
----
-
-## Venda de alimentos
-
-.panelset[
-
-.panel[.panel-name[Receita total]
-.pull-left[
-```{r}
-purchases %>% 
-  left_join(prices) #<<
-```
-]
-.pull-right[
-```{r}
-purchases %>% 
-  left_join(prices) %>%
-  summarise(total_revenue = sum(price)) #<<
-```
-]
-]
-
-.panel[.panel-name[Receita por consumidor]
-
-.pull-left[
-```{r}
-purchases %>% 
-  left_join(prices)
-```
-]
-.pull-right[
-```{r}
-purchases %>% 
-  left_join(prices) %>%
-  group_by(customer_id) %>% #<<
-  summarise(total_revenue = sum(price))
-```
-]
-
-]
-
-]
 
 ---
 
